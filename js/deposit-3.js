@@ -11,10 +11,19 @@ document.getElementById('btn-deposit').addEventListener('click', function(){
     const depositTotalElement= document.getElementById('deposit-total');
     const previousDepositAmount= parseFloat(depositTotalElement.innerText);
 
-    // step-5 calculation (newDepositAmount + previousDepositAmount) the set up
+    // step-5 calculation (newDepositAmount + previousDepositAmount) then set up
     const currentDepositAmount= newDepositAmount + previousDepositAmount;
 
-    // step- 6
     depositTotalElement.innerText= currentDepositAmount;
 
+    //-------------------Deposit with Balance------------
+    // step-6
+    const balanceTotalElement= document.getElementById('balance-total');
+    const previousBalanceAmount= parseFloat(balanceTotalElement.innerText);
+    
+    // step-7 calculation (newDepositAmount + previousBalanceAmount) then set up
+    const currentBalanceAmount= newDepositAmount + previousBalanceAmount;
+
+    balanceTotalElement.innerText= currentBalanceAmount;
+   
 })
